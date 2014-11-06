@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "pingpong/style.css" %}" />
+</head>
+<body>
+    <div id="all">
+        <div id="menu">
+            <div id="menu_image">
+                <a href="{% url 'index' %}"><img src="{% static "pingpong/images/hogarth_logo.jpeg"%}" id="bannerimg"></a>
+            </div>
+            <div id="menu_text">
+                <ul>
+                    <a href="{% url 'index' %}"><li>Home</li></a>
+                    <li>Add
+                        <ul>
+                            <a href="{% url 'add_games' %}"><li>Game</li></a>
+                            <a href="{% url 'add_players' %}"><li>Player</li></a>
+                        </ul>
+                        </li>
+                    <a href="{% url 'scoreboard' %}"><li>Scoreboard</li></a>
+                    <a href="{% url 'ranking' %}"><li>Ranking</li></a>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+        <h3>{% block contenttitle %}{% endblock %}</h3>
+        {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

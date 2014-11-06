@@ -1,0 +1,32 @@
+{% extends "base_page.html" %}
+
+{% block title %}Ranking{% endblock %}
+
+{% block contenttitle %}Ranking{% endblock %}
+
+{% block content %}
+    {% if ranking %}
+    <table>
+        <tr id="table_menu">
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Wins</th>
+            <th>Looses</th>
+            <th>Total</th>
+            <th>Points</th>
+        </tr>
+    {% for rnk in ranking %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ rnk.Player }}</td>
+            <td>{{ rnk.Wins }}</td>
+            <td>{{ rnk.Looses }}</td>
+            <td>{{ rnk.Total }}</td>
+            <td>{{ rnk.Points }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+        <p>No ranking</p>
+    {% endif %}
+{% endblock %}

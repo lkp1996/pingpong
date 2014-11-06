@@ -1,0 +1,1 @@
+[program:pingpong]directory=/opt/hogarth/pingpongproject/pingpongproject/command=gunicorn pingpongproject.wsgi -b 0.0.0.0:8000autostart=trueautorestart=truestdout_logfile=/var/log/supervisor/pingpong.logredirect_stderr=truesetuid==projadm

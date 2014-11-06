@@ -1,0 +1,230 @@
+#all {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Helvetica;
+    min-height: 800px;
+    min-width: 1016px;
+}
+
+#bannerimg {
+    width: 29px;
+}
+
+#menu_image {
+    width: 48px;
+    height: 48px;
+    margin-right: 50px;
+    display: inline-block;
+}
+
+#menu_text {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content {
+    text-align: center;
+    line-height: 40px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#player_select {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 150px
+}
+
+#score_input {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 50px
+}
+
+#addgamecontent {
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 600px;
+}
+
+tr:hover {
+    background-color: #9F9F9F;
+    transition: all 0.3s;
+}
+
+td {
+    border: 1px solid black;
+}
+
+#table_menu{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+#add_button {
+    width: 150px;
+    border: black solid 1px;
+    cursor: pointer;
+    background-color: black;
+    color:white;
+    font-size:12px;
+    padding-top:10px;
+    padding-bottom:10px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#add_button:hover {
+    background-color: #666;
+    color: black;
+    text-transform: uppercase;
+}
+
+#search_button {
+    width: 80px;
+    border: black solid 1px;
+    cursor: pointer;
+    background-color: black;
+    color:white;
+    font-size:12px;
+    padding-top:5px;
+    padding-bottom:5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#search_button:hover {
+    background-color: #666;
+    color: black;
+    text-transform: uppercase;
+}
+
+#search {
+    text-align: right;
+    padding-bottom: 15px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu {
+    background-color: black;
+    position:fixed;
+    top:0px;
+    right: 0px;
+    left: 0px;
+}
+
+div.error {
+    color: red;
+}
+
+label {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    list-style: none;
+}
+
+ul li {
+    font: 16px Helvetica;
+    color: white;
+    display: inline-block;
+    position: relative;
+    padding: 15px 20px;
+    background: black;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+ul li:hover {
+    background: white;
+    color: black;
+}
+
+ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 150px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -transition: opacity 0.2s;
+}
+
+ul li ul li {
+    background: white;
+    display: block;
+    color: black;
+}
+
+ul li ul li:hover {
+    background: #9F9F9F;
+}
+
+ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+select {
+    background-color: white;
+    color: black;
+    height: 25px;
+    border-radius: 0px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+li.success {
+    color: #82FF7D;
+    background-color: white;
+}
+
+li.success:hover {
+    color: #82FF7D;
+    background-color: white;
+}

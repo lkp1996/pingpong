@@ -1,0 +1,34 @@
+{% extends "base_page.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block contenttitle %}Welcome to the Ping-Pong website of Hogarth !{% endblock %}
+
+{% block content %}
+
+<p>Here you can add the matches you played and see who is the player to beat !</p>
+
+<h3>Today's games</h3>
+
+{% if todays_games %}
+    <table>
+        <tr id="table_menu">
+            <th>Player 1</th>
+            <th>Player 2</td>
+            <th>Score</th>
+            <th>Time</th>
+        </tr>
+    {% for game in todays_games %}
+        <tr>
+            <td>{{ game.player_one }}</td>
+            <td>{{ game.player_two }}</td>
+            <td>{{ game.score_one }} - {{ game.score_two }}</td>
+            <td>{{ game.created|date:'H:i' }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No Games</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base_page.html" %}
+
+{% block title %}Add Players{% endblock %}
+
+{% block contenttitle %}Add a player{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.as_table }}
+    {% csrf_token %}
+    <input type="submit" value="Add the player" id="add_button" />
+</form>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}

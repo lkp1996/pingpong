@@ -1,0 +1,34 @@
+{% extends "base_page.html" %}
+
+{% block title %}Scoreboard{% endblock %}
+
+{% block contenttitle %}Scoreboard{% endblock %}
+
+{% block content %}
+<div id="search">
+    <form action="" method="GET">
+        <input type="search" name="q" placeholder="Player Name"/>
+        <input type="submit" value="Search" id="search_button"/>
+    </form>
+</div>
+    {% if scoreboard %}
+    <table>
+        <tr id="table_menu">
+            <th>Player 1</th>
+            <th>Player 2</th>
+            <th>Score</th>
+            <th>Date</th>
+        </tr>
+    {% for game in scoreboard %}
+        <tr>
+            <td>{{ game.player_one }}</td>
+            <td>{{ game.player_two }}</td>
+            <td>{{ game.score_one }} - {{ game.score_two }}</td>
+            <td>{{ game.created|date:'d/m/Y H:i' }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+        <p>No Games</p>
+    {% endif %}
+{% endblock %}
